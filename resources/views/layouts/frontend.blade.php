@@ -44,7 +44,7 @@
                 <div class="header-bottom-wrapper">
                     <div class="logo-2 furniture-logo ptb-30">
                         <a href="/">
-                            <img height="60" style="transform:scale(1.5);object-fit: cover;"
+                            <img height="45" style="transform:scale(1.5);object-fit: cover;"
                                 src="{{ asset('storage/images/assets/Gadget.png') }}" alt="">
                         </a>
                     </div>
@@ -215,8 +215,10 @@
                                 src="{{ asset('storage/images/assets/Gadget.png') }}" alt="">
                         </div>
                         <div class="footer-about-2">
-                            <p>Discover the world of Bird Gadget Store, where technology<br> meets innovation.
-                                Experience the evolution of gadgets, with <br>a touch of the latest technology.
+                            <p style="text-align: justify;">Discover the world of Bird Gadget Store, where
+                                technology<br style="text-align: justify;"> meets innovation.
+                                Experience the evolution of gadgets, with <br style="text-align: justify;">a touch of
+                                the latest technology.
                         </div>
                     </div>
                     <div class="footer-widget mb-30">

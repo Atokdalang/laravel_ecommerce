@@ -3,7 +3,7 @@
 @section('content')
     <!-- header end -->
     <div class="breadcrumb-area pt-205 breadcrumb-padding pb-210"
-        style="background-image: url({{ asset('frontend/assets/img/bg/breadcumb.jpg') }})">
+        style="background-image: url({{ asset('frontend/assets/img/bg/shadow.png') }})">
         <div class="container">
             <div class="breadcrumb-content text-center">
                 <h2>Order Received</h2>
