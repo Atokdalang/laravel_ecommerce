@@ -54,43 +54,62 @@
     <!-- end categories -->
 
     <!-- services -->
-    <div class="services-area wrapper-padding-4 gray-bg pt-120 pb-80">
-        <div class="container-fluid">
-            <div class="section-title-furits text-center">
-                <h2>Why Choose Us</h2>
-            </div>
-            <br>
-            <div class="services-wrapper mt-40">
-                <div class="single-services mb-40">
-                    <div class="services-img">
-                        <img src="{{ asset('frontend/assets/img/icon-img/26.png') }}" alt="">
-                    </div>
-                    <div class="services-content">
-                        <h4>Free Shippig</h4>
-                        <p>Contrary to popular belief, Lorem Ipsum is random text. </p>
-                    </div>
+    <!DOCTYPE html>
+    <html>
+
+    <body>
+        <div class="services-area wrapper-padding-4 gray-bg pt-120 pb-80" style="background-color: black; color: white;">
+            <div class="container-fluid">
+                <div class="section-title-furits text-center mb-80">
+                    <h2 style="color: white;">Why Choose Us</h2>
                 </div>
-                <div class="single-services mb-40">
-                    <div class="services-img">
-                        <img src="{{ asset('frontend/assets/img/icon-img/27.png') }}" alt="">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-services mb-40">
+                            <div class="services-img">
+                                <img src="{{ asset('frontend/assets/img/icon-img/26.png') }}" alt="">
+                            </div>
+                            <div class="services-content">
+                                <h4 style="color: white;">Free Shipping</h4>
+                                <p style="color: white;">Enjoy free shipping on all flash sale orders. Take advantage of
+                                    this special offer now!
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="services-content">
-                        <h4>24/7 Support</h4>
-                        <p>Contrary to popular belief, Lorem Ipsum is random text. </p>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-services mb-40">
+                            <div class="services-img">
+                                <img src="{{ asset('frontend/assets/img/icon-img/27.png') }}" alt="">
+                            </div>
+                            <div class="services-content">
+                                <h4 style="color: white;">24/7 Support</h4>
+                                <p style="color: white;">Get round-the-clock support whenever you need it. Our dedicated
+                                    team is here to assist
+                                    you 24/7.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="single-services mb-40">
-                    <div class="services-img">
-                        <img src="{{ asset('frontend/assets/img/icon-img/28.png') }}" alt="">
-                    </div>
-                    <div class="services-content">
-                        <h4>Secure Payments</h4>
-                        <p>Contrary to popular belief, Lorem Ipsum is random text. </p>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-services mb-40">
+                            <div class="services-img">
+                                <img src="{{ asset('frontend/assets/img/icon-img/28.png') }}" alt="">
+                            </div>
+                            <div class="services-content">
+                                <h4 style="color: white;">Secure Payments</h4>
+                                <p style="color: white;">Shop with confidence knowing that your payment is safe. We use
+                                    industry-standard
+                                    encryption and secure payment gateways to ensure the security of your transactions.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </body>
+
+    </html>
+
     <!-- end services -->
 
     <!-- products -->

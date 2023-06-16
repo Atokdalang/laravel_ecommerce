@@ -1,0 +1,233 @@
+/* CSS form login */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #ecf0f3;
+}
+
+.wrapper {
+    max-width: 1100px;
+    min-height: auto;
+    margin: 120px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #ecf0f3;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+
+.form-container {
+    background-color: #ecf0f3;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-field {
+    margin-bottom: 15px;
+    width: 500px;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.logo-container {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.logo img {
+    max-width: 310px;
+}
+
+.wrapper .name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1.3px;
+    padding-left: 10px;
+    color: #555;
+}
+
+.wrapper .form-field input,
+.wrapper .form-field textarea {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 10px 15px 10px 10px;
+}
+
+.wrapper .form-field {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+
+.wrapper .form-field .far {
+    color: #555;
+}
+
+.wrapper .btn {
+    box-shadow: none;
+    width: 100%;
+    height: 40px;
+    background-color: #03a9f4;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+    letter-spacing: 1.3px;
+}
+
+.wrapper .btn:hover {
+    background-color: #039be5;
+}
+
+.wrapper a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.wrapper a:hover {
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.col-md-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.button {
+    position: relative;
+    overflow: hidden;
+    width: 140px;
+    height: 50px;
+    border-radius: 25px;
+    border: 0;
+    color: #fff;
+    background: #03a9f4;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+}
+
+.button-text,
+.button-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.button-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.button-links {
+    opacity: 0;
+    justify-content: space-between;
+    padding: 0 28px;
+    transition: 0.2s;
+}
+
+.button-links a {
+    transform: translateY(50px);
+    transition: 0.3s;
+}
+
+.button:hover {
+    border-radius: 6px;
+}
+
+.button:hover .button-links {
+    opacity: 1;
+}
+
+.button:hover .button-links a {
+    transform: translateY(0);
+}
+
+.button:hover .button-links a:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.button:hover .button-links a:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.button:hover .button-links a:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.button:hover .button-text {
+    transform: translateY(-100%);
+}
+@media (max-width: 768px) {
+    .form-field {
+        width: 100%; /* Lebar .form-field diubah menjadi 100% pada layar dengan lebar maksimum 768px */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .wrapper {
+        padding-top: 0;
+    }
+    .form-field {
+        width: 80%; /* Lebar .form-field diubah menjadi 80% pada layar dengan lebar antara 769px dan 1200px */
+    }
+    html,
+    body {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+    }
+}

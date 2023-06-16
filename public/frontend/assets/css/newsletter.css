@@ -1,0 +1,39 @@
+.subscribe-form-5 .input-group {
+    position: relative;
+    display: inline-block;
+}
+
+.subscribe-form-5 .email {
+    padding-right: 45px;
+    /* Adjust as needed */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.subscribe-form-5 .btn-subscribe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    /* Adjust as needed */
+    height: 100%;
+    border-radius: 0 4px 4px 0;
+    /* Adjust as needed */
+    background-color: #000;
+    /* Adjust as needed */
+    color: #fff;
+    /* Adjust as needed */
+    border: none;
+    cursor: pointer;
+}
+
+.subscribe-form-5 .btn-subscribe i {
+    font-size: 18px;
+    /* Adjust as needed */
+    margin-top: 3px;
+    /* Adjust as needed */
+}
+
+.divider-line {
+    border-top: 3px solid black;
+}

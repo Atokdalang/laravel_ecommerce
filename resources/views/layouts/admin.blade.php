@@ -51,36 +51,30 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <!-- Nav Item - User Information -->
-                        @if (Auth::check())
-                            @php
-                                $user = Auth::user();
-                            @endphp
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="userDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ $user->name }}</span>
-                                    <img class="img-profile rounded-circle"
-                                        src="{{ asset('storage/' . $user->image_profile) }}">
-                                </a>
-                                <!-- Dropdown - User Information -->
-                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                    aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" href="{{ route('profile.admin.profile') }}">Profile</a>
-                                    <hr class="dropdown-divider">
-                                    <a class="dropdown-item" href="#"
-                                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                        Logout
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endif
-                    </ul>
 
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span
+                                    class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->name }}</span>
+                                <img class="img-profile rounded-circle" src="{{ asset('backend/img/admin.png') }}">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#"
+                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="post">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+
+                    </ul>
 
                 </nav>
                 <!-- End of Topbar -->
@@ -112,7 +106,7 @@
                             reserved.</div>
                         <div>
                             <div>
-                                <i class="fa-solid fas fa-file text-muted me-2"></i><a
+                                <i class="fas fa-shield-alt text-muted me-2"></i><a
                                     href="https://www.privacypolicyonline.com/live.php?token=rahXz0okhrRvXSSum6K60xYQ2vlM3h4k"
                                     style="text-decoration: none; color: gray;"> Privacy
                                     Policy</a>

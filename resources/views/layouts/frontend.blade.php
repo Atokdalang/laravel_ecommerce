@@ -23,12 +23,17 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bundle.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/stylecontact.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/newsletter.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="{{ asset('frontend/assets/js/vendor/modernizr-2.8.3.min.js') }}"></script>
 
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/custom.css') }}">
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -52,7 +57,7 @@
                         <nav>
                             <ul>
                                 <li>
-                                    <a href="/">home</a>
+                                    <a href="{{ route('homepage') }}">home</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('shop.index') }}">shop</a>
@@ -67,7 +72,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#">contact</a>
+                                    <a href="{{ route('frontend.contact') }}">contact</a>
                                 </li>
                             </ul>
                         </nav>
@@ -130,7 +135,7 @@
                             <nav id="mobile-menu-active">
                                 <ul class="menu-overflow">
                                     <li>
-                                        <a href="#">HOME</a>
+                                        <a href="{{ route('homepage') }}">HOME</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('shop.index') }}">shop</a>
@@ -144,7 +149,7 @@
                                             @endforeach
                                         </ul>
                                     </li>
-                                    <li><a href="#"> Contact </a></li>
+                                    <li><a href="{{ route('frontend.contact') }}"> Contact </a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -206,95 +211,117 @@
 
     <!-- footer -->
     <footer class="footer-area">
-        <div class="footer-top-area pt-70 pb-35 wrapper-padding-5">
+        <div class="footer-top-area pt-70 pb-35 wrapper-padding-5 bg">
             <div class="container-fluid">
                 <div class="widget-wrapper">
-                    <div class="footer-widget mb-30">
-                        <div style="display: flex; justify-content: center; align-items: center;">
-                            <img height="60" style="transform:scale(1.5);object-fit: cover;"
-                                src="{{ asset('storage/images/assets/Gadget.png') }}" alt="">
-                        </div>
-                        <div class="footer-about-2">
-                            <p style="text-align: justify;">Discover the world of Bird Gadget Store, where
-                                technology<br style="text-align: justify;"> meets innovation.
-                                Experience the evolution of gadgets, with <br style="text-align: justify;">a touch of
-                                the latest technology.
-                        </div>
-                    </div>
-                    <div class="footer-widget mb-30">
-                        <h3 class="footer-widget-title-5">Contact Info</h3>
-                        <div class="footer-info-wrapper-3">
-                            <div class="footer-address-furniture">
-                                <div class="footer-info-icon3">
-                                    <span>Address: </span>
-                                </div>
-                                <div class="footer-info-content3">
-                                    <p>Pekanbaru, Riau<br>Jl. Pendidikan, Sidomulyo Barat, Tampan</p>
-                                </div>
+                    <div class="row">
+                        <section>
+                            <div class="col-md-10 offset-md-1 border-top1 d-flex flex-column align-items-center mb-3">
+                                <img src="{{ asset('storage/images/assets/Gadget.png') }}" width="100px"
+                                    alt="logo">
+                                <p class="text-justify">
+                                    Bird Gadget Store provides quality products from various well-known brands
+                                    in
+                                    electronics industry, such as smartphones, tablets, laptops, cameras, audio devices,
+                                    And
+                                    much more. This shop also offers various supporting accessories, such as cases,
+                                    charger, earphones and spare battery.
+                                    In recent years, Bird Gadget Store has grown its presence
+                                    in a manner
+                                    online through their e-commerce platform and official website. It is possible
+                                    customers to easily buy the electronic products they want
+                                    from
+                                    the comfort of their own home.
+                                    <br><br>
+                                    Bird Gadget Store is always committed to providing the best service to customers
+                                    customer
+                                    they. They have a well-trained and knowledgeable sales team
+                                    their products, ready to assist customers in selecting and understanding the
+                                    features of
+                                    the product they want.
+                                    With a good reputation and guaranteed product quality, Bird Gadget Store continues
+                                    growing and becoming a favorite destination for those looking for electronic devices
+                                    quality and up to date.
+                                </p>
                             </div>
-                            <div class="footer-address-furniture">
-                                <div class="footer-info-icon3">
-                                    <span>Phone: </span>
-                                </div>
-                                <div class="footer-info-content3">
-                                    <p><a href="https://wa.me/6282248847135">(+62) 82248847135</a><br><a
-                                            href="https://wa.me/6281372731846">(+62) 81372731846</a></p>
-                                </div>
-                            </div>
-                            <div class="footer-address-furniture">
-                                <div class="footer-info-icon3">
-                                    <span>E-mail: </span>
-                                </div>
-                                <div class="footer-info-content3">
-                                    <p><a href="mailto:fadlypku1email@gmail.com">Fadlypku1@gmail.com<br><a
-                                                href="mailto:fadlypku1email@gmail.com">Fadlypku1@gmail.com
-                                            </a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-widget mb-30">
-                        <h3 class="footer-widget-title-5">Newsletter</h3>
-                        <div class="footer-newsletter-2">
-                            <p>Send us your mail or next updates</p>
-                            <div id="mc_embed_signup" class="subscribe-form-5">
-                                <form
-                                    action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
-                                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                                    class="validate" target="_blank" novalidate>
-                                    <div id="mc_embed_signup_scroll" class="mc-form">
-                                        <input type="email" value="" name="EMAIL" class="email"
-                                            placeholder="Enter mail address" required>
-                                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                        <div class="mc-news" aria-hidden="true"><input type="text"
-                                                name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1"
-                                                value=""></div>
-                                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe"
-                                                id="mc-embedded-subscribe" class="button"></div>
+                        </section>
+                        <div class="col-md-12 mt-3">
+                            <div class="footer-widget mb-30">
+                                <hr class="divider-line mt-4 mb-4"> <!-- Pembatas sebelum newsletter -->
+                                <h3 class="footer-widget-title-5 text-center">Newsletter</h3>
+                                @if (Session::has('success'))
+                                    <div class="alert alert-success">
+                                        <i class="fa fa-check-circle"></i> Thank you for subscribing to Bird Gadget
+                                        Store's newsletter! Stay tuned for the latest updates and exclusive offers.
                                     </div>
-                                </form>
+                                @endif
+                                <div class="footer-newsletter-2">
+                                    <p class="text-center">Send us your email for exciting news and special promotions.
+                                    </p>
+                                    <div id="mc_embed_signup" class="subscribe-form-5">
+                                        <form action="{{ route('newsletter.subscribe') }}" method="POST"
+                                            class="validate">
+                                            @csrf
+                                            <div class="mc-form">
+                                                <div class="input-group">
+                                                    <input type="email" value="" name="email"
+                                                        class="email" placeholder="Enter your email address"
+                                                        required>
+                                                    <button type="submit" class="btn-subscribe">
+                                                        <i class="fa fa-paper-plane"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom ptb-20 gray-bg-8">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <div class="copyright-furniture">
-                            <p>Copyright © <a href="https://hastech.company/">HasTech</a> 2018 . All Right Reserved.
-                            </p>
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted"><strong>© 2023 Bird Gadget Store — <a href="{{ url('/') }}"
+                                style="text-decoration: none; color: gray;">
+                                @Bird_Gadget_Store</a>.</strong> All rights
+                        reserved.</div>
+                    <div>
+                        <div>
+                            <div class="contact-button-container">
+                                <button class="button">
+                                    <div class="button-container">
+                                        <span class="button-text">
+                                            <span>Contact</span>
+                                            <i class="fa-solid fa-phone"></i>
+                                        </span>
+                                        <span class="button-links">
+                                            <a
+                                                href="https://maps.google.com/maps?q=Jl.+Pendidikan,+Sidomulyo+Barat,+Tampan,+Pekanbaru,+Riau">
+                                                <i class="fa-regular fas fa-location-arrow"></i>
+                                            </a>
+                                            <a href="https://wa.me/6282248847135">
+                                                <i class="fas fa-mobile-alt"></i>
+                                            </a>
+                                            <a href="mailto:fadlypku1email@gmail.com">
+                                                <i class="fa-solid far fa-envelope"></i>
+                                            </a>
+                                            <a
+                                                href="https://www.privacypolicyonline.com/live.php?token=rahXz0okhrRvXSSum6K60xYQ2vlM3h4k">
+                                                <i class="fas fa-shield-alt"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </footer>
-
-
-
 
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
     @livewireScripts
@@ -314,6 +341,7 @@
     <script src="{{ asset('frontend/assets/js/app.js') }}"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
     <script>
         $(document).ready(function() {
             let bloodhound = new Bloodhound({

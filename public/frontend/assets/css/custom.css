@@ -5,3 +5,14 @@ span.category-name {
 .category-card:hover span.category-name {
     top: 45% !important;
 }
+
+.services-area {
+    background-color: black;
+    color: white;
+}
+
+.services-area h2,
+.services-area h4,
+.services-area p {
+    color: white;
+}

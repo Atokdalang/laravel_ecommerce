@@ -29,7 +29,6 @@ class User extends Authenticatable
         'province_id',
         'city_id',
         'postcode',
-        'image_profile'
     ];
 
     /**

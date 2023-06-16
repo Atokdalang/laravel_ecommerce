@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfileController;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsletterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,10 +35,6 @@ Route::get('text', function() { return view('frontend.payments.success');});
 // Rute untuk menampilkan halaman teks contoh
 
 
-Route::get('/user/profile', [ProfileController::class, 'profile'])->name('profile.admin.profile');
-// Rute untuk menampilkan profil pengguna admin
-
-
 Route::get('profile', [\App\Http\Controllers\Auth\ProfileController::class, 'index'])->name('profile.index');
 // Rute untuk menampilkan profil pengguna
 
@@ -47,12 +43,20 @@ Route::put('profile', [\App\Http\Controllers\Auth\ProfileController::class, 'upd
 // Rute untuk memperbarui profil pengguna
 
 
-Route::put('/user/profile/{id}', [ProfileController::class, 'update'])->name('profile.admin.update');
-// Rute untuk memperbarui profil pengguna admin
-
-
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
 //Route untuk homepage atau halaman awal setelah login
+
+
+Route::get('/contact', [\App\Http\Controllers\HomeController::class, 'contact'])->name('frontend.contact');
+//Route untuk halaman contact
+
+
+Route::post('/contact', '\App\Http\Controllers\HomeController@submitContactForm')->name('contact.submit');
+//Route untuk halaman notifikasi contact
+
+
+Route::post('/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
+//Route untuk halaman menangani langganan newsletter
 
 
 Route::get('search', [\App\Http\Controllers\ShopController::class, 'search'])->name('search');
