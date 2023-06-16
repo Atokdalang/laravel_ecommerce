@@ -215,10 +215,12 @@
             <div class="container-fluid">
                 <div class="widget-wrapper">
                     <div class="row">
-                        <section>
+                        <div class="footer-widget mb-30">
+                            <hr class="divider-line mt-4 mb-4 ml-3 mr-3">
                             <div class="col-md-10 offset-md-1 border-top1 d-flex flex-column align-items-center mb-3">
                                 <img src="{{ asset('storage/images/assets/Gadget.png') }}" width="100px"
                                     alt="logo">
+                                <br>
                                 <p class="text-justify">
                                     Bird Gadget Store provides quality products from various well-known brands
                                     in
@@ -244,10 +246,10 @@
                                     quality and up to date.
                                 </p>
                             </div>
-                        </section>
+                            <hr class="divider-line mt-4 mb-4 ml-3 mr-3">
+                        </div>
                         <div class="col-md-12 mt-3">
                             <div class="footer-widget mb-30">
-                                <hr class="divider-line mt-4 mb-4"> <!-- Pembatas sebelum newsletter -->
                                 <h3 class="footer-widget-title-5 text-center">Newsletter</h3>
                                 @if (Session::has('success'))
                                     <div class="alert alert-success">
