@@ -46,6 +46,8 @@ Route::put('profile', [\App\Http\Controllers\Auth\ProfileController::class, 'upd
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
 //Route untuk homepage atau halaman awal setelah login
 
+Route::get('/company-profile', [\App\Http\Controllers\HomeController::class, 'company'])->name('frontend.companyprofile');
+//Route untuk halaman contact
 
 Route::get('/contact', [\App\Http\Controllers\HomeController::class, 'contact'])->name('frontend.contact');
 //Route untuk halaman contact

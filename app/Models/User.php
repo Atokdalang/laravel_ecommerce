@@ -50,6 +50,33 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function getProfileImage()
+    {
+        $userRole = $this->roles()->pluck('title')->first();
+
+        if ($userRole === 'admin') {
+            return asset('backend/img/admin.png');
+        } elseif ($userRole === 'staff') {
+            return asset('backend/img/staff.png');
+        } else {
+            return asset('backend/img/default.png');
+        }
+    }
+
+    public function isAdmin()
+    {
+        $userRole = $this->roles()->pluck('title')->first();
+
+        return $userRole === 'admin';
+    }
+
+    public function isStaff()
+{
+    $userRole = $this->roles()->pluck('title')->first();
+
+    return $userRole === 'staff';
+}
+
     public function roles() {
         return $this->belongsToMany(Role::class, 'role_user');
     }

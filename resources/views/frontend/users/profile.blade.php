@@ -7,7 +7,7 @@
             <div class="breadcrumb-content text-center">
                 <h2>Register</h2>
                 <ul>
-                    <li><a href="#">home</a></li>
+                    <li><a href="{{ route('homepage') }}">home</a></li>
                     <li>register</li>
                 </ul>
             </div>

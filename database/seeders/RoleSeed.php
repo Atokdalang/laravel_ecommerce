@@ -23,6 +23,10 @@ class RoleSeed extends Seeder
                 'id'    => 2,
                 'title' => 'user',
             ],
+            [
+                'id'    => 3,
+                'title' => 'staff',
+            ],
         ];
 
         Role::insert($roles);

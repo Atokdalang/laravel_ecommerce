@@ -51,30 +51,47 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span
-                                    class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->name }}</span>
-                                <img class="img-profile rounded-circle" src="{{ asset('backend/img/admin.png') }}">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
+                                id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" style="padding-left: 5px;">
+                                <div class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->name }}
+                                </div>
+                                <div class="d-flex flex-column align-items-center">
+                                    <img class="img-profile rounded-circle"
+                                        src="{{ auth()->user()->getProfileImage() }}">
+                                    @if (auth()->check())
+                                        @if (auth()->user()->isAdmin())
+                                            <div class="text-center text-dark"
+                                                style="font-family: 'Poppins', sans-serif; font-weight: bold; font-size: 18px; color: #13484e; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(33, 113, 170, 0.3);">
+                                                {{ __('ADMIN') }}
+                                            </div>
+                                        @elseif(auth()->user()->isStaff())
+                                            <div class="text-center text-dark"
+                                                style="font-family: 'Poppins', sans-serif; font-weight: bold; font-size: 18px; color: #13484e; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(33, 113, 170, 0.3);">
+                                                {{ __('STAFF') }}
+                                            </div>
+                                        @endif
+                                    @endif
+                                </div>
                             </a>
+
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in ml-4"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#"
-                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                <a class="dropdown-item d-flex align-items-center" href="#"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    <span>Logout</span>
                                 </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="post">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                     @csrf
                                 </form>
                             </div>
                         </li>
-
                     </ul>
+
 
                 </nav>
                 <!-- End of Topbar -->

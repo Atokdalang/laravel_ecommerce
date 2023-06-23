@@ -34,6 +34,13 @@ class HomeController extends Controller
         return view('frontend.contact', $data);
     }
 
+    public function company()
+    {
+        $data = [];
+
+        return view('frontend.companyprofile', $data);
+    }
+
     public function submitContactForm(Request $request)
 {
     $request->validate([

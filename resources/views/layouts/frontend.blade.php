@@ -35,6 +35,15 @@
     <!-- Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet" />
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @livewireStyles
@@ -71,6 +80,10 @@
                                         @endforeach
                                     </ul>
                                 </li>
+                                <li>
+                                    <a href="{{ route('frontend.companyprofile') }}">Company Profile</a>
+                                </li>
+                                <li><a href="#footer">About</a></li>
                                 <li>
                                     <a href="{{ route('frontend.contact') }}">contact</a>
                                 </li>
@@ -149,6 +162,10 @@
                                             @endforeach
                                         </ul>
                                     </li>
+                                    <li>
+                                        <a href="{{ route('frontend.companyprofile') }}">Company Profile</a>
+                                    </li>
+                                    <li><a href="#footer">About</a></li>
                                     <li><a href="{{ route('frontend.contact') }}"> Contact </a></li>
                                 </ul>
                             </nav>
@@ -210,7 +227,7 @@
     @yield('content')
 
     <!-- footer -->
-    <footer class="footer-area">
+    <footer id="footer" class="footer-area">
         <div class="footer-top-area pt-70 pb-35 wrapper-padding-5 bg">
             <div class="container-fluid">
                 <div class="widget-wrapper">
